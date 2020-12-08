@@ -1,7 +1,7 @@
-# Preserve This Podcast
+# The New Gazette - RSS Archive
 
 ## About
-This is an RSS archive of publications from [The New Gazette](https://newgazette.co), a service providing curated and unbiased local news. 
+This is an RSS archive of publications from [The New Gazette](https://newgazette.co), a service providing curated and unbiased local news via email newsletters. 
 
 ## Acknowledgement
 This page was based off of the codebase for [preservethispodcast.org](http://preservethispodcast.org/), a [Andrew W. Mellon grant-funded project](https://mellon.org/grants/grants-database/grants/new-york-metropolitan-reference-research-library-agency/1711-05080/) to preserve podcasts for future listeners.
