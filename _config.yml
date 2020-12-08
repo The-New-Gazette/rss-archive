@@ -1,7 +1,7 @@
-title: Preserve This Podcast
-description: Preserve This Podcast is a project funded by the Andrew W. Mellon Foundation. We want to make sure that podcasts don’t disappear as software formats change and RSS hosting services go down.
+title: The New Gazette - RSS Archive
+description: The New Gazette provides curated and unbiased local news — no more, no less. This archive stores our publications for future access by the communities we serve.
 baseurl: ""
-url: "http://www.preservethispodcast.org"
+url: "http://newgazette.co"
 
 # Markdown settings
 markdown: kramdown
