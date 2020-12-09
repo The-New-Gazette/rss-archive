@@ -8,16 +8,14 @@ layout: default
 			<div class="columns is-centered is-vcentered">
 				<div class="column is-fullwidth has-text-centered">
 					<h2>
-						Keep your podcast talking
-						<br />
-						For all who are listening
+						Preserving The New Gazette publications for our communities
 					</h2>
 				</div>
 			</div>
 		</div>
 	</div>
 	<a href="#episodes">
-		<div>Follow these steps</div>
+		<div>See our archived publications</div>
 		<span class="icon is-large">
 		  <i class="fas fa-l2x fa-play"></i>
 		</span>
@@ -27,24 +25,9 @@ layout: default
 {% if site.data.content.episodes %}
 <section id="episodes" class="section" name="podcast">
 	<div class="container">
-		<h2>LISTEN: how &amp; why to preserve your podcast</h2>
+		<h2>VIEW: Read our previous editions</h2>
+		<br>
 		{% for episode in site.data.content.episodes %}
-
-{% if episode.transcript_file %}
-{% assign transcript_path = 'transcripts/'| append: episode.transcript_file | append: '.md' %}
-{% capture transcript_content %}{% include_relative {{transcript_path}} %}{% endcapture %}
-<div class="modal" id="transcript-{{ forloop.index }}">
-	<div class="modal-background"></div>
-	<div class="modal-content">
-		<div class="box">
-			<div class="content">
-	  			{{ transcript_content | markdownify }}
-	  		</div>
-		</div>
-	</div>
-	<button class="modal-close is-large" aria-label="close"></button>
-</div>
-{% endif %}
 
 		<div class="box">
 			<div class="columns is-vcentered">
@@ -56,10 +39,6 @@ layout: default
 						{{ forloop.index }}
 					</span>
 				</div>
-				<div class="column">
-					<h3>{{ episode.name }}</h3>
-					<a href="{{ episode.download_link }}">Download episode</a>{% if episode.transcript_file %}&nbsp;&nbsp;|&nbsp;&nbsp;<a data-modal="#transcript-{{ forloop.index }}" href="#">Read transcript</a>{% endif %}{% if episode.exercises_link %}&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ episode.exercises_link }}" target="_blank">Do the exercises</a>{% endif %}
-				</div>
 			</div>
 
 			</div>
@@ -67,8 +46,8 @@ layout: default
 					<a href="{{ episode.download_link }}" data-embed-link="{{ episode.embed_link }}" class="button is-primary is-large player-button" target="_blank">
 						<span class="icon">
 						  <i class="fas fa-play"></i>
-						</span>&nbsp;
-						Play
+						</span>
+						Read
 					</a>
 			</div>
 			</div>
@@ -94,23 +73,7 @@ layout: default
 	  			<h2>
 	  				Subscribe on...
 	  			</h2>
-	  			<div class="columns">
-	  				{% if site.data.content.applepodcasts_link %}
-	  				<div class="column">
-	  					<strong><a href="{{ site.data.content.applepodcasts_link }}">
-	  						<img src="{{ '/assets/images/apple_icon.svg' | relative_url }}" alt="Subscribe on Apple Podcasts"><br />
-	  						Apple Podcasts</a></strong>
-	  				</div>
-	  				{% endif %}
-	  				{% if site.data.content.googlepodcasts_link %}
-	  				<div class="column">
-	  					<strong><a href="{{ site.data.content.googlepodcasts_link }}">
-	  						<img src="{{ '/assets/images/google_icon.svg' | relative_url }}" alt="Subscribe on Google Podcasts"><br />
-	  						Google Podcasts</a></strong>
-	  				</div>
-	  				{% endif %}
-	  			</div>
-	  			{% if site.data.content.radiopublic_link %}<a href="{{ site.data.content.radiopublic_link }}">Radiopublic</a>{% endif %}{% if site.data.content.stitcher_link %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ site.data.content.stitcher_link }}">Stitcher</a>{% endif %}{% if site.data.content.rss_link %}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="{{ site.data.content.rss_link }}">RSS Feed</a>{% endif %}
+				{% if site.data.content.rss_link %}<a href="{{ site.data.content.rss_link }}">RSS Feed</a>{% endif %}
 	  		</div>
 		</div>
 	</div>
