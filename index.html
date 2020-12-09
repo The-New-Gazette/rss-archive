@@ -39,6 +39,10 @@ layout: default
 						{{ forloop.index }}
 					</span>
 				</div>
+				<div class="column">	
+					<h3>{{ episode.name }}</h3>	
+					{% if episode.exercises_link %}&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ episode.exercises_link }}" target="_blank">share</a>{% endif %}	
+				</div>
 			</div>
 
 			</div>
