@@ -137,6 +137,10 @@ header {
 section#intro {
 	background:$primary;
 	position:relative;
+	.logo { 
+		max-width: 75%;
+		margin-bottom:$gap/8;
+	}
 	h2 {
 		font-size:$size-1;
 		color:$white;
@@ -185,7 +189,7 @@ section#intro {
 	}
 }
 
-section#episodes {
+section#publications {
 	background:$blue;
 	h2 {
 		color:$white;

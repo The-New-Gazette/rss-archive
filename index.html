@@ -7,7 +7,7 @@ layout: default
 		<div class="container">
 			<div class="columns is-centered is-vcentered">
 				<div class="column is-fullwidth has-text-centered">
-					<img src="{{base}}/assets/images/tng_logo.png" alt="The New Gazette">
+					<img src="{{base}}/assets/images/tng_logo.png"  class="logo" alt="The New Gazette">
 					<h2>
 						Preserving local news summaries for our communities
 					</h2>
@@ -23,13 +23,13 @@ layout: default
 	</a>
 </section>
 
-{% if site.publications.hsv-monthly %}
+{% if site.publications %}
 <section id="publications" class="section" name="publications">
 	<div class="container">
 		<h2>Huntsville, AL - The Monthly Brief</h2>
 		<br>
 
-		{% for post in site.publications %}
+		{% for pub in site.publications %}
 		<div class="box">
 			<div class="columns is-vcentered">
 			<div class="column">
@@ -41,13 +41,13 @@ layout: default
 					</span>
 				</div>
 				<div class="column">	
-					<h3>{{ post.title }}</h3>
+					<h3>{{ pub.title }}</h3>
 				</div>
 			</div>
 
 			</div>
 			<div class="column is-narrow">
-					<a href="{{ post.url }}" class="button is-primary is-large player-button" target="_blank">
+					<a href="{{ pub.url }}" class="button is-primary is-large player-button" target="_blank">
 						<span class="icon">
 						  <i class="far fa-newspaper"></i>
 						</span>

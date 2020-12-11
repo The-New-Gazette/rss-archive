@@ -15,7 +15,10 @@ copyright:   "CC BY 4.0"
 # Social
 twitter_link: https://twitter.com/thenewgazette
 
-# RSS Links
+# RSS
+collections:
+  publications:
+
 rss:
   hsv-monthly:
     - name: HSV Monthly Brief
@@ -41,8 +44,3 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-
-collections:
-  episodes:
-  publications:
