@@ -29,7 +29,7 @@ layout: default
 		<h2>Huntsville, AL - The Monthly Brief</h2>
 		<br>
 
-		{% for post in site.publications.hsv-monthly-brief %}
+		{% for post in site.publications %}
 		<div class="box">
 			<div class="columns is-vcentered">
 			<div class="column">
@@ -58,8 +58,8 @@ layout: default
 		</div>
 		{% endfor %}
 
-		{% if site.rss.hsv-monthly-brief %}
-		<a class="button is-primary is-small" href="{{ site.rss.hsv-monthly-brief.url }}">
+		{% if site.rss.hsv-monthly %}
+		<a class="button is-primary is-small" href="{{ site.rss.hsv-monthly.url }}">
 			<span class="icon">
 			  <i class="fas fa-rss"></i>
 			</span>&nbsp;
