@@ -22,7 +22,7 @@
   <link rel="alternate" type="application/rss+xml" title="The New Gazette - Monthly Brief Archive" href="https://rss.newgazette.co/monthly-brief.rss" /> -->
   {% if site.rss %}
     {% for feed in site.rss.hsv-monthly %}
-      <link rel="alternate" type="application/rss+xml" title="The New Gazette - {{ feed.name }}" href="{{ feed.url }}" />
+      <link rel="alternate" type="application/rss+xml" title="The New Gazette - {{ feed.name }}" href="{{ feed.link }}" />
     {% endfor %}
   {% endif %}
 

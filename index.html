@@ -41,18 +41,13 @@ layout: default
 					</span>
 				</div>
 				<div class="column">	
-					<h3>{{ pub.title }}</h3>
+					<h3>{{ pub.pub_date | date: "%Y" }} - {{ pub.title }}</h3>
 				</div>
 			</div>
 
 			</div>
 			<div class="column is-narrow">
-					<a href="{{ pub.url }}" class="button is-primary is-large player-button" target="_blank">
-						<span class="icon">
-						  <i class="far fa-newspaper"></i>
-						</span>
-						Read
-					</a>
+					<a href="{{ pub.link }}" class="button is-primary is-large player-button" target="_blank">Read</a>
 			</div>
 			</div>
 		</div>
@@ -60,7 +55,7 @@ layout: default
 
 		{% if site.rss.hsv-monthly %}
 			{% for feed in site.rss.hsv-monthly %}
-				<a class="button is-primary is-small" href="{{ feed.url }}">RSS Feed</a>
+				<a class="button is-primary is-small" href="{{ feed.link }}">RSS Feed</a>
 			{% endfor %}
 		{% endif %} 
 
