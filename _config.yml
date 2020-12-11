@@ -43,10 +43,10 @@ plugins:
   - jekyll-sitemap
 
 # Feeds
-feed:
-  collections:
-    episodes:
-      path: "/episodes.xml"
+# feed:
+#   collections:
+#     episodes:
+#       path: "/episodes.xml"
 
 collections:
   episodes:
