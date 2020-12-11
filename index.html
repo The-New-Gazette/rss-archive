@@ -7,14 +7,15 @@ layout: default
 		<div class="container">
 			<div class="columns is-centered is-vcentered">
 				<div class="column is-fullwidth has-text-centered">
+					<img src="{{base}}/assets/images/tng_logo.png" alt="The New Gazette">
 					<h2>
-						Preserving The New Gazette publications for our communities
+						Preserving local news summaries for our communities
 					</h2>
 				</div>
 			</div>
 		</div>
 	</div>
-	<a href="#episodes">
+	<a href="#publications">
 		<div>See our archived publications</div>
 		<span class="icon is-large">
 		  <i class="fas fa-l2x fa-play"></i>
@@ -22,13 +23,13 @@ layout: default
 	</a>
 </section>
 
-{% if site.data.content.episodes %}
-<section id="episodes" class="section" name="podcast">
+{% if site.publications.hsv-monthly-brief %}
+<section id="publications" class="section" name="publications">
 	<div class="container">
-		<h2>VIEW: Read our previous editions</h2>
+		<h2>Huntsville, AL - The Monthly Brief</h2>
 		<br>
-		{% for episode in site.data.content.episodes %}
 
+		{% for post in site.publications.hsv-monthly-brief %}
 		<div class="box">
 			<div class="columns is-vcentered">
 			<div class="column">
@@ -40,16 +41,15 @@ layout: default
 					</span>
 				</div>
 				<div class="column">	
-					<h3>{{ episode.name }}</h3>	
-					{% if episode.exercises_link %}&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ episode.exercises_link }}" target="_blank">share</a>{% endif %}	
+					<h3>{{ post.title }}</h3>
 				</div>
 			</div>
 
 			</div>
 			<div class="column is-narrow">
-					<a href="{{ episode.download_link }}" data-embed-link="{{ episode.embed_link }}" class="button is-primary is-large player-button" target="_blank">
+					<a href="{{ post.url }}" class="button is-primary is-large player-button" target="_blank">
 						<span class="icon">
-						  <i class="fas fa-play"></i>
+						  <i class="far fa-newspaper"></i>
 						</span>
 						Read
 					</a>
@@ -58,29 +58,15 @@ layout: default
 		</div>
 		{% endfor %}
 
-		<a class="button is-primary is-small" data-modal="#subscribe" href="#">
+		{% if site.rss.hsv-monthly-brief %}
+		<a class="button is-primary is-small" href="{{ site.rss.hsv-monthly-brief.url }}">
 			<span class="icon">
 			  <i class="fas fa-rss"></i>
 			</span>&nbsp;
-			Subscribe
+			RSS Feed
 		</a>
+		{% endif %}
 
 	</div>
-	<div id="player-container"></div>
 </section>
 {% endif %}
-<div class="modal" id="subscribe">
-	<div class="modal-background"></div>
-	<div class="modal-content">
-		<div class="box">
-			<div class="content has-text-centered">
-	  			<h2>
-	  				Subscribe on...
-	  			</h2>
-				{% if site.data.content.rss_link %}<a href="{{ site.data.content.rss_link }}">RSS Feed</a>{% endif %}
-	  		</div>
-		</div>
-	</div>
-	<button class="modal-close is-large" aria-label="close"></button>
-</div>
-

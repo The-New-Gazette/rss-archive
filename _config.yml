@@ -1,7 +1,25 @@
-title: The New Gazette - RSS Archive
+# Site settings
+title:       The New Gazette - RSS Archive
 description: The New Gazette provides curated and unbiased local news — no more, no less. This archive stores our publications for future access by the communities we serve.
-baseurl: ""
-url: "http://newgazette.co"
+subtitle:    "Preserving local news for future readers"
+baseurl:     ""
+url:         "http://newgazette.co"
+email:       editor@newgazette.co
+language:    en-us
+author:      The New Gazette
+copyright:   "CC BY 4.0"
+
+# Data
+# google_analytics: UA-XXXXX-Y
+
+# Social
+twitter_link: https://twitter.com/thenewgazette
+
+# RSS Links
+rss:
+  hsv-monthly-brief:
+    - name: HSV Monthly Brief
+      url: https://archive.newgazette.co/hsv-monthly-brief.rss
 
 # Markdown settings
 markdown: kramdown
@@ -23,21 +41,3 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-# Podcast Feed settings
-title:          The New Gazette - RSS Archive
-email:          editor@newgazette.co
-description:    "The New Gazette provides curated and unbiased local news — no more, no less. This archive stores our publications for future access by the communities we serve."
-subtitle:       "Preserving local news for future readers"
-url:            https://newgazette.co
-language:       en-us
-author:         PreserveThisPodcast
-copyright:      "CC BY 4.0"
-
-feed:
-  collections:
-    episodes:
-      path: "/episodes.xml"
-
-collections:
-  episodes:
