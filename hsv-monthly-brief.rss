@@ -19,7 +19,7 @@
 			<url>{{ site.url }}/assets/images/tng_logo.png</url>
 			<title>{{ site.title }}</title>
 		</image>
-		{% for post in site.publications %}
+		{% for post in site.publications.hsv-monthly %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				<link>{{ post.url }}</link>
