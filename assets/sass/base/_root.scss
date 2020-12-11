@@ -1,17 +1,18 @@
 $fa-font-path: "/assets/node_modules/@fortawesome/fontawesome-free/webfonts";
 
 @import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
-@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Poppins:200,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
-$primary: #D79C34;
+$primary: #f4ede2;
 $primary-light: #F9E5D0;
-$blue: #20285C;
+$green: #20285C;
+$green: #162f34;
 $pink: #ECB6B8;
 $pink-light: #F5DBDC;
 $white: #FFFFFF;
 
-$family-primary:  'Poppins', sans-serif;
-$family-secondary: 'Patrick Hand SC', cursive;
+$family-primary:  'Open Sans', sans-serif;
+$family-secondary: 'Merriweather', serif;
 
 $radius-small: 0px;
 $radius: 0px;
@@ -60,7 +61,7 @@ header {
 	z-index:1;
 	transition: background .3s;
 	h1 {
-		background:$blue;
+		background:$green;
 		color:$white;
 		padding: $button-padding-vertical $button-padding-horizontal;
 		font-size:$size-5;
@@ -73,7 +74,7 @@ header {
 			@include strong-type();
 			display:block;
 			margin:10px 0 9px 1.5rem;
-			color:$blue;
+			color:$green;
 			transition: color .3s;
 		}
 	}
@@ -95,7 +96,7 @@ header {
 		margin-bottom:0;
 		height:43px;
 		width:43px;
-		background:$blue;
+		background:$green;
 		span {
 			height:2px;
 			background:$white;
@@ -113,7 +114,7 @@ header {
 	  position: fixed;
 	  top: 0;
 	  width: 100%;
-	  background:$blue;
+	  background:$green;
 
 	  @include desktop {
 	  	h1 {
@@ -167,7 +168,7 @@ section#intro {
 		}
 		.icon {
 			transform:rotate(90deg);
-			background:$blue;
+			background:$green;
 			border-radius:50%;
 			i {
 				padding-left:3px;
@@ -186,7 +187,7 @@ section#intro {
 }
 
 section#publications {
-	background:$blue;
+	background:$green;
 	h2 {
 		color:$white;
 		margin-bottom:$gap/4;
@@ -239,7 +240,7 @@ section#publications {
 
 #subscribe {
 	a {
-		color:$blue;
+		color:$green;
 		text-decoration:underline;
 		transition: opacity .3s;
 		&:hover {
