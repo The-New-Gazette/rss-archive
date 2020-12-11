@@ -59,13 +59,10 @@ layout: default
 		{% endfor %}
 
 		{% if site.rss.hsv-monthly %}
-		<a class="button is-primary is-small" href="{{ site.rss.hsv-monthly.url }}">
-			<span class="icon">
-			  <i class="fas fa-rss"></i>
-			</span>&nbsp;
-			RSS Feed
-		</a>
-		{% endif %}
+			{% for feed in site.rss.hsv-monthly %}
+				<a class="button is-primary is-small" href="{{ feed.url }}">RSS Feed</a>
+			{% endfor %}
+		{% endif %} 
 
 	</div>
 </section>

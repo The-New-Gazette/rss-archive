@@ -10,9 +10,7 @@
 		<link>{{ site.url }}</link>
 		<language>en-us</language>
 		<managingEditor>{{ site.email }} ({{ site.author }})</managingEditor>
-		<webMaster>{{ site.email }} ({{ site.author }})</webMaster>
 		<copyright>2019-{{ site.time | "%Y" }} {{ site.title }}</copyright>
-		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
 		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 		<image>
 			<link>{{ site.url }}</link>
@@ -22,10 +20,9 @@
 		{% for pub in site.publications %}
 			<item>
 				<title>{{ pub.title | xml_escape }}</title>
-				<link>{{ pub.url }}</link>
-				<pubDate>{{ pub.date | date_to_rfc822 }}</pubDate>
+				<link>{{ site.url }}{{ pub.url }}</link>
+				<pubDate>{{ pub.pub_date | date_to_rfc822 }}</pubDate>
 				<description>{{ pub.headlines | xml_escape }}</description>
-				<guid isPermaLink="true">{{ site.url }}{{ pub.url }}</guid>
 			</item>
 		{% endfor %}
 	</channel>
