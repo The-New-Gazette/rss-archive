@@ -19,7 +19,7 @@ twitter_link: https://twitter.com/thenewgazette
 rss:
   hsv-monthly:
     - name: HSV Monthly Brief
-      url: https://archive.newgazette.co/hsv-monthly-brief.rss
+      url: https://archive.newgazette.co/hsv-monthly.rss
 
 # Markdown settings
 markdown: kramdown
