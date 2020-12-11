@@ -41,3 +41,12 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# Feeds
+feed:
+  collections:
+    episodes:
+      path: "/episodes.xml"
+
+collections:
+  episodes:
