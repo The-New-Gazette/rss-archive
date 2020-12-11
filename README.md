@@ -6,6 +6,11 @@ This is an RSS archive of publications from [The New Gazette](https://newgazette
 ## Acknowledgement
 This page was based off of the codebase for [preservethispodcast.org](http://preservethispodcast.org/), a [Andrew W. Mellon grant-funded project](https://mellon.org/grants/grants-database/grants/new-york-metropolitan-reference-research-library-agency/1711-05080/) to preserve podcasts for future listeners.
 
+# Tech
+This page is built with:
+ - [Jekyll](https://jekyllrb.com/) 
+ - [Liquid](https://shopify.github.io/liquid/)
+
 ## Customize
    * `_data / content.yml` controls text and links displayed on the homepage/front end, including:
       * Google Analytics
