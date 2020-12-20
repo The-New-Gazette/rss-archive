@@ -11,6 +11,10 @@ This page is built with:
  - [Jekyll](https://jekyllrb.com/) 
  - [Liquid](https://shopify.github.io/liquid/)
 
+# Run Locally
+ - `bundle install`
+ - `bundle exec jekyll serve`
+
 ## Customize
    * `_data / content.yml` controls text and links displayed on the homepage/front end, including:
       * Google Analytics

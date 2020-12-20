@@ -3,7 +3,7 @@ title:       The New Gazette - RSS Archive
 description: The New Gazette provides curated and unbiased local news — no more, no less. This archive stores our publications for future access by the communities we serve.
 subtitle:    "Preserving local news for future readers"
 baseurl:     ""
-url:         "http://newgazette.co"
+company_url: "https://newgazette.co"
 email:       editor@newgazette.co
 language:    en-us
 author:      The New Gazette
@@ -15,14 +15,20 @@ copyright:   "CC BY 4.0"
 # Social
 twitter_link: https://twitter.com/thenewgazette
 
-# RSS
+# Collections
 collections:
   publications:
+  hsv-monthly:
+  hsv-insider:
 
+# RSS
 rss:
   hsv-monthly:
     - name: HSV Monthly Brief
-      link: https://archive.newgazette.co/hsv-monthly.rss
+      link: hsv-monthly.rss
+  hsv-insider:
+    - name: HSV Insider
+      link: hsv-insider.rss
 
 # Markdown settings
 markdown: kramdown
