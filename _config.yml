@@ -21,13 +21,6 @@ collections:
   hsv-monthly:
   hsv-insider:
 
-# RSS
-rss:
-  hsv-monthly:
-    - name: HSV Monthly Brief
-  hsv-insider:
-    - name: HSV Insider
-
 # Markdown settings
 markdown: kramdown
 
