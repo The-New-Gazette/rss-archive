@@ -1,5 +1,5 @@
 # Site settings
-title:       The New Gazette - RSS Archive
+title:       The New Gazette Archive
 description: The New Gazette provides curated and unbiased local news — no more, no less. This archive stores our publications for future access by the communities we serve.
 subtitle:    "Preserving local news for future readers"
 baseurl:     ""
@@ -25,10 +25,8 @@ collections:
 rss:
   hsv-monthly:
     - name: HSV Monthly Brief
-      link: hsv-monthly.rss
   hsv-insider:
     - name: HSV Insider
-      link: hsv-insider.rss
 
 # Markdown settings
 markdown: kramdown

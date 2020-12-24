@@ -8,7 +8,7 @@ layout: default
 			<div class="columns is-centered is-vcentered">
 				<div class="column is-fullwidth has-text-centered">
 					<img src="{{base}}/assets/images/tng_logo.png"  class="logo" alt="The New Gazette">
-					<h2>
+					<h2 class="primary-dark">
 						Just the local news you needed — preserved and freely available.
 					</h2>
 				</div>
@@ -23,101 +23,6 @@ layout: default
 	</a>
 </section>
 
-<!-- {% if site.hsv-monthly %}
-<section id="publications" class="section" name="publications">
-
-	{% if site.hsv-monthly %}
-	<div class="container">
-		<h2>Huntsville, AL - The Monthly Brief</h2>
-		<br>
-
-		{% for pub in site.hsv-monthly reversed %}
-		<div class="box">
-			<div class="columns is-vcentered">
-			<div class="column">
-
-			<div class="columns is-vcentered is-mobile">
-				<div class="column is-narrow">
-					<span class="count">
-						{{ forloop.rindex }}
-					</span>
-				</div>
-				<div class="column">	
-					<h3>{{ pub.pub_date | date: "%Y" }} - {{ pub.title }}</h3>
-				</div>
-			</div>
-
-			</div>
-			<div class="column is-narrow">
-					<a href="{{ pub.link }}" class="button is-primary is-large" target="_blank">Read</a>
-			</div>
-			</div>
-		</div>
-		{% endfor %}
-
-		{% if site.rss.hsv-monthly %}
-			{% for feed in site.rss.hsv-monthly %}
-				<a class="button is-primary is-small" href="{{ feed.link | prepend: site.baseurl }}">RSS Feed</a>
-			{% endfor %}
-		{% endif %} 
-
-	</div>
-	{% endif %}
-
-	{% if site.hsv-insider %}
-	<div class="container">
-		<h2>Huntsville, AL - Insider Archive</h2>
-		<br>
-
-		{% for pub in site.hsv-insider reversed %}
-		<div class="box">
-			<div class="columns is-vcentered">
-			<div class="column">
-
-			<div class="columns is-vcentered is-mobile">
-				<div class="column is-narrow">
-					<span class="count">
-						{{ forloop.rindex }}
-					</span>
-				</div>
-				<div class="column">	
-					<h3>{{ pub.pub_date | date: "%Y" }} - {{ pub.title }}</h3>
-				</div>
-			</div>
-
-			</div>
-			<div class="column is-narrow">
-					<a href="{{ pub.link }}" class="button is-primary is-large" target="_blank">Read</a>
-			</div>
-			</div>
-		</div>
-		{% endfor %}
-
-		{% if site.rss.hsv-insider %}
-			{% for feed in site.rss.hsv-insider %}
-				<a class="button is-primary is-small" href="{{ feed.link | prepend: site.baseurl }}">RSS Feed</a>
-			{% endfor %}
-		{% endif %} 
-
-	</div>
-	{% endif %}
-
-</section>
-{% endif %} -->
-
-<!-- How to loop through so I dont have to duplicate for each publication? -->
-<strong>test</strong>
-{% for pub in site.publications %}
-{% assign pub_name = pub.publication %}
-<p>{{ pub_name }}</p>
-<ul>
-	{% for post in site[pub_name] %}
-		<li>{{ post.title }}</li>
-	{% endfor %}
-</ul>
-{% endfor %}
-
-<!-- new -->
 {% if site.publications %}
 <section id="publications" class="section" name="publications">
 
@@ -130,7 +35,8 @@ layout: default
 		<h2>{{ pub_location }} - {{ pub_title }}</h2>
 		<br>
 
-		{% for post in site[pub_name] reversed %}
+		<!-- Someday we will need to address limiting to 5 latest, etc -->
+		{% for post in site[pub_name] reversed limit:5 %}
 		<div class="box">
 			<div class="columns is-vcentered">
 			<div class="column">
@@ -148,17 +54,14 @@ layout: default
 
 			</div>
 			<div class="column is-narrow">
-					<a href="{{ post.link }}" class="button is-primary is-large" target="_blank">Read</a>
+					<a href="{{ post.link }}" class="button is-large" target="_blank">Read</a>
 			</div>
 			</div>
 		</div>
 		{% endfor %}
 
-		{% if site.rss[pub_name] %}
-			{% for feed in site.rss[pub_name] %}
-				<a class="button is-primary is-small" href="{{ feed.link | prepend: site.baseurl }}">RSS Feed</a>
-			{% endfor %}
-		{% endif %} 
+		<a class="button is-small" target="_blank" href="{{ pub_name | prepend: site.baseurl }}.rss">RSS</a>
+		<a class="button is-small" target="_blank" href="{{ pub_name | prepend: site.baseurl }}.xml">XML</a>
 
 	</div>
 	{% endif %}

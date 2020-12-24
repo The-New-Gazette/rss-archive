@@ -3,13 +3,18 @@ $fa-font-path: "/assets/node_modules/@fortawesome/fontawesome-free/webfonts";
 @import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
-$primary: #b19c76;
+$primary: #f4ede2;
 $primary-light: #f4ede2;
-$green: #20285C;
+$primary-dark: #b19c76;
+$blue: #20285C;
 $green: #162f34;
 $pink: #ECB6B8;
 $pink-light: #F5DBDC;
 $white: #FFFFFF;
+
+.primary-dark {
+	color:$primary;
+}
 
 $family-primary:  'Open Sans', sans-serif;
 $family-secondary: 'Merriweather', serif;
@@ -19,8 +24,8 @@ $radius: 0px;
 $radius-large: 0px;
 
 $navbar-background-color: rgba(255,255,255,0);
-$footer-background-color: $primary;
-$navbar-burger-color: $white;
+$footer-background-color: $primary-dark;
+$navbar-burger-color: $primary;
 
 @import 'node_modules/bulma/bulma';
 
@@ -41,6 +46,10 @@ main {
 }
 
 .button {
+	background-color:$primary-dark;
+	color:$primary;
+	border:transparent;
+
 	@include strong-type();
 	&.is-small {
 		letter-spacing:.33px;
@@ -62,7 +71,7 @@ header {
 	transition: background .3s;
 	h1 {
 		background:$green;
-		color:$white;
+		color:$primary;
 		padding: $button-padding-vertical $button-padding-horizontal;
 		font-size:$size-5;
 		font-weight:$weight-bold;
@@ -99,11 +108,11 @@ header {
 		background:$green;
 		span {
 			height:2px;
-			background:$white;
+			background:$primary;
 		}
 	}
 	.navbar-menu.is-active {
-		background:$white;
+		background:$primary;
 		padding:20ƒpx 0;
 		position:fixed;
 		top:0;
@@ -123,7 +132,7 @@ header {
 		nav.navbar {
 			padding-right:10px;
 	  		a {
-	  			color:$white;
+	  			color:$primary;
 	 		}
 		}
 	  }
@@ -145,7 +154,7 @@ section#intro {
 	}
 	h2 {
 		font-size:$size-1;
-		color:$white;
+		color:$primary-dark;
 		font-weight:$weight-bold;
 		padding:$gap/2 0;
 		@include mobile {
@@ -159,12 +168,13 @@ section#intro {
 		bottom:32px;
 		left:50%;
 		transform:translateX(-50%);
-		color:$white;
+		color:$primary;
 
 		@include strong-type();
 		div {
 			display:block;
 			margin-bottom:$gap/8;
+			color:$primary-dark;
 		}
 		.icon {
 			transform:rotate(90deg);
@@ -189,7 +199,7 @@ section#intro {
 section#publications {
 	background:$green;
 	h2 {
-		color:$white;
+		color:$primary;
 		margin-bottom:$gap/4;
 		font-size:$size-3;
 		font-weight:$weight-bold;
@@ -201,7 +211,7 @@ section#publications {
 	.box {
 		.count {
 			display:block;
-			color:$white;
+			color:$primary;
 			background:$pink;
 			font-weight:$weight-bold;
 			font-size:$size-3;
@@ -256,9 +266,9 @@ section#publications {
 footer.footer {
 	padding:12px 24px;
 	font-family:$family-secondary;
-	color: $white;
+	color: $primary;
 	a, a:hover {
-		color:$white;
+		color:$primary;
 		text-decoration:underline;
 	}
 	a:hover {

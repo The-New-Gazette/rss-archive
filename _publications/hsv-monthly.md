@@ -1,5 +1,6 @@
 ---
 publication: hsv-monthly
-title: HSV Monthly Brief
+title: Monthly Brief
 location: Huntsville, AL
+city_code: HSV
 ---
