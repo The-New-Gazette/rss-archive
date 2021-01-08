@@ -9,7 +9,7 @@ layout: default
 				<div class="column is-fullwidth has-text-centered">
 					<img src="{{base}}/assets/images/tng_logo.png"  class="logo" alt="The New Gazette">
 					<h2 class="primary-dark">
-						Just the local news you needed — preserved and freely available.
+						Local news summaries archived and freely available.
 					</h2>
 				</div>
 			</div>
@@ -54,14 +54,14 @@ layout: default
 
 			</div>
 			<div class="column is-narrow">
-					<a href="{{ post.link }}" class="button is-large" target="_blank">Read</a>
+					<a href="{{ post.link }}" class="button is-large">Read</a>
 			</div>
 			</div>
 		</div>
 		{% endfor %}
 
-		<a class="button is-small" target="_blank" href="{{ pub_name | prepend: site.baseurl }}.rss">RSS</a>
-		<a class="button is-small" target="_blank" href="{{ pub_name | prepend: site.baseurl }}.xml">XML</a>
+		<a class="button is-normal" href="{{ pub_name | prepend: site.baseurl }}.rss">RSS</a>
+		<a class="button is-normal" href="{{ pub_name | prepend: site.baseurl }}.xml">XML</a>
 
 	</div>
 	{% endif %}

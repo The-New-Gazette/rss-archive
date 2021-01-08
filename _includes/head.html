@@ -12,18 +12,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The New Gazette's local news summaries archived and freely available."></meta>
+  <meta property="og:image" content="https://newgazette.co/img/logo_bg2.png" />
+
+  {% include favicon.html %}
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <link rel="stylesheet" href="{{ base }}/assets/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <!-- <link rel="alternate" type="application/rss+xml" title="The New Gazette - Weekly Archive" href="https://rss.newgazette.co/weekly.rss" />
-  <link rel="alternate" type="application/rss+xml" title="The New Gazette - Monthly Brief Archive" href="https://rss.newgazette.co/monthly-brief.rss" /> -->
-  {% if site.rss %}
-    {% for feed in site.rss.hsv-monthly %}
-      <link rel="alternate" type="application/rss+xml" title="The New Gazette - {{ feed.name }}" href="{{ feed.link }}" />
-    {% endfor %}
-  {% endif %}
-
+  
 </head>

@@ -52,7 +52,7 @@ main {
 
 	@include strong-type();
 	&.is-small {
-		letter-spacing:.33px;
+		letter-spacing:1.5px;
 	}
 	&.is-large {
 		letter-spacing:1.5px;
@@ -149,11 +149,11 @@ section#intro {
 	position:relative;
 	.logo { 
 		width: 75%;
-		max-width: 75%;
+		max-width: 650px;
 		margin-bottom:$gap/8;
 	}
 	h2 {
-		font-size:$size-1;
+		font-size:$size-2;
 		color:$primary-dark;
 		font-weight:$weight-bold;
 		padding:$gap/2 0;
