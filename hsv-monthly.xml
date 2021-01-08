@@ -25,7 +25,7 @@ pub_city: HSV
 				<title>{{ post.title | xml_escape }}</title>
 				<link>{{ post.link }}</link>
 				<pubDate>{{ post.pub_date | date_to_rfc822 }}</pubDate>
-				<description>{{ post.headlines | xml_escape }}</description>
+				<description>{{ post.excerpt | strip_html }}</description>
 			</item>
 			{% endfor %}
 		{% endif %}

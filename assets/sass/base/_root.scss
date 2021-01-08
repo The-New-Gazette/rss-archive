@@ -49,9 +49,13 @@ main {
 	background-color:$primary-dark;
 	color:$primary;
 	border:transparent;
+	margin-right: 10px;
 
 	@include strong-type();
 	&.is-small {
+		letter-spacing:1.5px;
+	}
+	&.is-medium {
 		letter-spacing:1.5px;
 	}
 	&.is-large {
